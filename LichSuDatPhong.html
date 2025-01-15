@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch Sử Đặt Phòng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .edit-btn {
+            background-color: #ffc107;
+            color: white;
+        }
+        .edit-btn:hover {
+            background-color: #e0a800;
+        }
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+        .details-btn {
+            background-color: #007bff;
+            color: white;
+        }
+        .details-btn:hover {
+            background-color: #0056b3;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Lịch Sử Đặt Phòng</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tên Chủ Thú Cưng</th>
+                    <th>Tên Thú Cưng</th>
+                    <th>Loại Thú Cưng</th>
+                    <th>Ngày Nhận Phòng</th>
+                    <th>Ngày Trả Phòng</th>
+                    <th>Hành Động</th>
+                </tr>
+            </thead>
+            <tbody id="bookingsTableBody">
+                <!-- Booking rows will be inserted here by JavaScript -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6">
+                        <button onclick="window.location.href = '/DatPhong.html'">Đặt Phòng Mới</button>
+                        <button onclick="window.location.href = '/TrangChu.html'">Quay Lại</button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Chỉnh Sửa Đặt Phòng</h2>
+            <input type="hidden" id="editBookingId">
+            <label for="editOwnerName">Tên Chủ Thú Cưng</label>
+            <input type="text" id="editOwnerName" required>
+            <label for="editPetName">Tên Thú Cưng</label>
+            <input type="text" id="editPetName" required>
+            <label for="editPetType">Loại Thú Cưng</label>
+            <select id="editPetType" required>
+                <option value="dog">Chó</option>
+                <option value="cat">Mèo</option>
+                <option value="other">Khác</option>
+            </select>
+            <label for="editCheckInDate">Ngày Nhận Phòng</label>
+            <input type="date" id="editCheckInDate" required>
+            <label for="editCheckOutDate">Ngày Trả Phòng</label>
+            <input type="date" id="editCheckOutDate" required>
+            <label for="editSpecialRequests">Yêu Cầu Đặc Biệt</label>
+            <textarea id="editSpecialRequests" rows="4"></textarea>
+            <button onclick="updateBooking()">Cập Nhật</button>
+        </div>
+    </div>
+
+    <script type="module" src="/LichSuDatPhong.js"></script>
+</body>
+</html>

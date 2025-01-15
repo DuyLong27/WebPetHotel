@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('img/background') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            overflow: hidden;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+        }
+        .login-container {
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 100%;
+            z-index: 1;
+        }
+        .login-form {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .login-form h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .login-form input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-form button:hover {
+            background-color: #218838;
+        }
+        .login-form .options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .login-form .options a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .login-form .options a:hover {
+            text-decoration: underline;
+        }
+        .login-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-image img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+        }
+        .show-password {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            opacity: 0.7;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-right: 319px;
+        }
+        .show-password input {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="login-container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <form id="login-form" method="POST">
+                <div>
+                    <input type="text" name="username" placeholder="Username" id="login-username" required>
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="Password" id="login-password" required>
+                </div>
+                
+                <div class="show-password">
+                    <input type="checkbox" onclick="togglePassword()">ShowPassword
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div class="options">
+                <a href="/forgot-password">Forgot Password?</a>
+                <a href="/register.html">Register</a>
+            </div>
+        </div>
+        <div class="login-image">
+            <img src="img/3766277.png" alt="Logo">
+        </div>
+    </div>
+
+    <script type="module" src="/login.js"></script>
+
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("login-password");
+            if (passwordField.type === "login-password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "login-password";
+            }
+        }
+    </script>
+</body>
+</html>

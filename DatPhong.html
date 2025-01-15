@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Phòng Cho Thú Cưng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .details-btn {
+            background-color: #7a8708;
+            color: white;
+            width: 20%;
+            margin-bottom: 20px;
+        }
+        .details-btn:hover {
+            background-color: #6b6404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Đặt Phòng Cho Thú Cưng</h2>
+        <form id="bookingForm">
+            <label for="ownerName">Tên Chủ Thú Cưng</label>
+            <input type="text" id="ownerName" name="ownerName" required>
+
+            <label for="petName">Tên Thú Cưng</label>
+            <input type="text" id="petName" name="petName" required>
+
+            <label for="petType">Loại Thú Cưng</label>
+            <select id="petType" name="petType" required>
+                <option value="dog">Chó</option>
+                <option value="cat">Mèo</option>
+                <option value="other">Khác</option>
+            </select>
+
+            <label for="checkInDate">Ngày Nhận Phòng</label>
+            <input type="date" id="checkInDate" name="checkInDate" required>
+
+            <label for="checkOutDate">Ngày Trả Phòng</label>
+            <input type="date" id="checkOutDate" name="checkOutDate" required>
+
+            <label for="specialRequests">Yêu Cầu Đặc Biệt</label>
+            <textarea id="specialRequests" name="specialRequests" rows="4"></textarea>
+            
+            <button class="details-btn" onclick="window.location.href = '/TrangChu.html'">Quay Lại</button>
+            <button type="submit">Đặt Phòng</button>
+        </form>
+    </div>
+    <script type="module" src="/DatPhong.js"></script>
+</body>
+</html>

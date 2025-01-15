@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khách Sạn Thú Cưng</title>
+    <link rel="stylesheet" href="/TrangChu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href=""><img src="/img/logo.png" alt="Logo"></a>
+        </div>
+        <div>
+            <a href="#banner">Giới Thiệu</a>
+            <a href="#services">Dịch Vụ</a>
+            <a href="#review">Đánh Giá</a>
+            <a href="#footer">Liên Hệ</a>
+            <a href="/DatPhong.html">Đặt Phòng</a>
+            <a href="/LichSuDatPhong.html">Lịch Sử Đặt Phòng</a>
+            <a href=""><img src="/img/TuongDii.png" alt="User"></a>
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <div id="banner" class="banner">
+        <div>
+            <h1>Chào Mừng Đến Với Khách Sạn Thú Cưng</h1>
+            <p>Nơi lý tưởng dành cho thú cưng của bạn</p>
+        </div>
+    </div>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <div class="slide">
+            <img src="/img/slideshow1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="/img/slideshow2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="/img/slideshow3.jpg" alt="Slide 3">
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <div id="services" class="services">
+        <h2>Dịch Vụ</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>Chăm Sóc 24/7</h3>
+                <img src="/img/icons8-cat-48.png" alt="">
+                <div class="service-content">
+                    <p>Đội ngũ nhân viên tận tâm, luôn theo dõi thú cưng</p>
+                    <p>của bạn.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <h3>Phòng Riêng</h3>
+                <img src="/img/icons8-clinic-64.png" alt="">
+                <div class="service-content">
+                    <p>Phòng thoải mái, sạch sẽ và an toàn cho thú cưng.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <h3>Dịch Vụ Spa</h3>
+                <img src="/img/icons8-bird-50.png" alt="">
+                <div class="service-content">
+                    <p>Tắm, cắt tỉa và thư giãn cho thú cưng</p>
+                    <p>của bạn.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <h3>Dịch Vụ Thể Dục</h3>
+                <img src="/img/icons8-dog.png" alt="">
+                <div class="service-content">
+                    <p>Giúp thú cưng của bạn duy trì sức khỏe với các</p>
+                    <p>bài tập thể dục vui nhộn.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <h3>Chăm Sóc Sức Khỏe</h3>
+                <img src="/img/icons8-animal-44.png" alt="">
+                <div class="service-content">
+                    <p>Kiểm tra sức khỏe định kỳ và tiêm phòng cho thú cưng.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <h3>Tổ Chức Tiệc</h3>
+                <img src="/img/icons8-bird-50.png" alt="">
+                <div class="service-content">
+                    <p>Chúng tôi tổ chức các buổi tiệc sinh nhật và sự kiện</p>
+                    <p> đặc biệt cho thú cưng.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="customer-review" id="review">
+        <div class="container">
+            <div class="container__left">
+                <h1>Đánh Giá Uy Tín</h1>
+                <p>
+                    Khách sạn thú cưng này sở hữu một không gian rộng lớn và được thiết kế chuyên biệt cho từng loại
+                    dịch vụ. Từ phòng nghỉ riêng tư, khu vực vui chơi, đến khu tập thể dục và spa, mọi thứ đều được bố
+                    trí hợp lý và tối ưu cho nhu cầu của thú cưng. Khuôn viên ngoài trời rộng rãi với không gian xanh
+                    giúp thú cưng vừa được vận động, vừa thư giãn thoải mái.
+
+                    Quy mô lớn của khách sạn thể hiện sự đầu tư bài bản và khả năng đáp ứng lượng lớn khách hàng cùng
+                    lúc mà vẫn đảm bảo chất lượng dịch vụ.
+                </p>
+                <p>
+                    Khách sạn được trang bị hiện đại với các dụng cụ hỗ trợ chăm sóc thú cưng hàng đầu, từ máy kiểm tra
+                    sức khỏe, dụng cụ cắt tỉa lông, đến các món đồ chơi an toàn cho vật nuôi.
+                </p>
+            </div>
+            <div class="container__right">
+                <div class="card">
+                    <img src="/img/user-3.jpg" alt="user" />
+                    <div class="card__content">
+                        <span><i class="ri-double-quotes-l"></i></span>
+                        <div class="card__details">
+                            <p>
+                                Khách sạn thú cưng của chúng tôi mang đến dịch vụ chăm sóc đẳng cấp với các phòng riêng
+                                biệt, không gian rộng rãi và tiện nghi hiện đại.
+                            </p>
+                            <h4>- Marnus Stephen</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/img/user-4.jpg" alt="user" />
+                    <div class="card__content">
+                        <span><i class="ri-double-quotes-l"></i></span>
+                        <div class="card__details">
+                            <p>
+                                Đội ngũ nhân viên tận tâm, luôn theo dõi và chăm sóc thú cưng của bạn với yêu thương và
+                                sự chuyên nghiệp. </p>
+                            <h4>- Andrew Jettpace</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/img/user-5.jpg" alt="user" />
+                    <div class="card__content">
+                        <span><i class="ri-double-quotes-l"></i></span>
+                        <div class="card__details">
+                            <p>
+                                Thú cưng của bạn sẽ được tham gia nhiều hoạt động vui chơi, giải trí và thể dục trong
+                                suốt thời gian lưu trú tại khách sạn.
+                            </p>
+                            <h4>- Stacy Stone</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-us" id="contactus">
+        <div class="contact-container">
+            <!-- Thông tin liên hệ -->
+            <div class="contact-info">
+                <h2>Liên hệ với chúng tôi</h2>
+                <p>
+                    Cần hỗ trợ hoặc tư vấn? Hãy để chúng tôi đồng hành cùng bạn trên hành trình chăm sóc thú cưng. Chúng tôi luôn sẵn sàng giải đáp mọi thắc mắc!
+                </p>
+                <ul>
+                    <li><i class="ri-map-pin-line"></i> Địa chỉ: MindX Technology</li>
+                    <li><i class="ri-phone-line"></i> Điện thoại: (+84) 987-654-321</li>
+                    <li><i class="ri-mail-line"></i> Email: longduy27@gmail.com</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-fill"></i></a>
+                </div>
+            </div>
+
+            <!-- Form liên hệ -->
+            <div class="contact-form">
+                <form id="contactForm">
+                    <h3>Gửi lời nhắn cho chúng tôi</h3>
+                    <div class="form-group">
+                        <label for="name">Họ và tên</label>
+                        <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Nhập email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Lời nhắn</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Viết lời nhắn của bạn..." required></textarea>
+                    </div>
+                    <button type="submit">Gửi ngay</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Thông tin bản quyền -->
+                <p>Pets Hotel</p>
+    
+                <!-- Liên kết nhanh -->
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Hỗ trợ</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Liên kết mạng xã hội -->
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="#" target="_blank"><i class="ri-twitter-fill"></i></a>
+                    <a href="#" target="_blank"><i class="ri-instagram-line"></i></a>
+                    <a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                </div>
+            </div>
+        </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => slide.style.display = 'none');
+            slideIndex++;
+            if (slideIndex > slides.length) slideIndex = 1;
+            slides[slideIndex - 1].style.display = 'block';
+            setTimeout(showSlides, 3000); // Change slide every 3 seconds
+        }
+
+        function changeSlide(n) {
+            slideIndex += n - 1;
+            showSlides();
+        }
+    </script>
+</body>
+
+</html>
